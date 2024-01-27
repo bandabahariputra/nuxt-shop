@@ -30,6 +30,11 @@ const handleClickCheckout = async () => {
     const result = await $fetch('/api/midtrans/token', {
       method: 'POST',
       body: {
+        productId: product.value?.id,
+        price: product.value?.price,
+        name: product.value?.title,
+        category: product.value?.category,
+        quantity: quantity.value,
         grossAmount: totalPrice.value,
       },
     })
