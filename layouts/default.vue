@@ -7,7 +7,7 @@ const { selectedFilter } = storeToRefs(productStore)
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen w-full relative pb-48">
     <nav class="h-12 flex relative">
       <div
         class="container flex items-center"
@@ -50,5 +50,11 @@ const { selectedFilter } = storeToRefs(productStore)
     </nav>
 
     <slot />
+
+    <footer class="absolute bottom-0 left-0 w-full py-6 border-t">
+      <div class="container">
+        <p class="text-center text-sm">Copyright &copy; 2024</p>
+      </div>
+    </footer>
   </div>
 </template>

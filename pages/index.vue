@@ -39,7 +39,7 @@ const handleCheckout = (product: IProduct) => {
     </div>
   </div>
 
-  <div class="border-b pt-4 pb-24">
+  <div class="pt-4">
     <div class="container">
       <div
         v-if="filteredProducts"
@@ -75,12 +75,6 @@ const handleCheckout = (product: IProduct) => {
       </div>
     </div>
   </div>
-
-  <footer class="py-6 mt-32">
-    <div class="container">
-      <p class="text-center text-sm">Copyright &copy; 2024</p>
-    </div>
-  </footer>
 
   <ModalBackdrop
     v-if="selectedProduct"
