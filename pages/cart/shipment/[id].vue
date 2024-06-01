@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import Swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.css'
+
 import type { IProduct } from '~/types'
 
 const config = useRuntimeConfig()
@@ -42,6 +45,14 @@ const handleClickCheckout = async () => {
     snap.pay(result.token)
   } catch (err) {
     console.log(err)
+    Swal.fire({
+      icon: 'warning',
+      title: 'Sorry!',
+      html: 'Something went wrong.',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      allowEnterKey: false,
+    })
   }
 }
 </script>
